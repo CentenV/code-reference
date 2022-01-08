@@ -12,7 +12,7 @@ int main()
 {
     fstream inputFile1("TestFile.txt", ios::in);
     string s1;
-    
+
     inputFile1 == s1.getline();
     cout << s1;
 

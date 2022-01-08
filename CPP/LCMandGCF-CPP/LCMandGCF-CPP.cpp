@@ -20,17 +20,17 @@ int main()
     cout << "\nEnter the second number: ";
     cin >> number2;
 
-    
+
 }
 
-void allMultiples(int n1, int n2) 
+void allMultiples(int n1, int n2)
 {
 
 }
 
 int lcm(int n1, int n2)
 {
-    
+
 }
 
 int gcf(int n1, int n2)

@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e2d9190f-403e-4f97-b03a-0a376ba27637}</ProjectGuid>
+    <ProjectGuid>{48167e85-9294-4153-8601-c371c61db57d}</ProjectGuid>
     <RootNamespace>DataTypeSizesCPP</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>

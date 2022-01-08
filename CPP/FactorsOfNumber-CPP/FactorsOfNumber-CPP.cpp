@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     int number, factorCount = 0;
-    
+
     cout << "Enter a number to find all the factors: ";
     cin >> number;
     cout << "\nThe factors of " << number << " are: ";

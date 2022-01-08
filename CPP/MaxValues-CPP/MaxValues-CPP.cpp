@@ -6,7 +6,7 @@
 #include <limits>
 using namespace std;
 
-template <class type>
+template <typename type>
 class dataInfo {
 private:
     string maxPrintString = "The maximum limit of ", minPrintString = "The minimum limit of ", endPrintString = " data type: ";
@@ -27,6 +27,7 @@ private:
             cout << minPrintString << typeName << endPrintString << minValue << endl;
         }
     }
+    // Fix any variations that are presented by non-numeric/typical data types
     void dataCorrection() {
         if (typeName == "__int64") {
             typeName = "long";
@@ -62,7 +63,7 @@ public:
         typeName = typeid(type).name();
 
         dataCorrection();
-        if (typeName == "char" || typeName == "signed char" || typeName == "unsigned char") {}
+        if (typeName == "char" || typeName == "signed char" || typeName == "unsigned char") {}      // Condition is in place because there is already a custom print for these data types
         else {
             print();
         }
@@ -72,7 +73,7 @@ public:
 void initialize() {
     // Original integer: meant to pass in type. Variables had to be initialized or else error
     // Create a dataInfo object the does all the printing and computation
-    // Call the function to initiate all the calculations
+    // Calls the method to initiate all the calculations
 
     int integer = 0;
     dataInfo<int> integer_Size;

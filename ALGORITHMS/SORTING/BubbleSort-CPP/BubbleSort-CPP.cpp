@@ -1,6 +1,6 @@
 // Sorting an array using the BUBBLE SORT method
 // Language: C++
-/*  
+/*
 Example:
 { 145, 76345, 7145, 53246, 132, 65346, 3214, 4235, 1354 } (ORIGINAL ARRAY)
 145 76345 7145 53246 132 65346 3214 4235 1354

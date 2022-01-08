@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{2e541b10-292c-48b1-a1f3-8d9ebcdb35a6}</ProjectGuid>
+    <ProjectGuid>{5fb7e3a0-2507-44f5-aad5-b6a019f9fdc0}</ProjectGuid>
     <RootNamespace>BubbleSortCPP</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>

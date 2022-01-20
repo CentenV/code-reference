@@ -10,13 +10,15 @@ using namespace std;
 
 int main()
 {
-    fstream inputFile1("TestFile.txt", ios::in);
-    string s1;
+    ofstream aFile("test.txt");
+    aFile << "rolls royce";
+    aFile.close();
 
-    inputFile1 == s1.getline();
-    cout << s1;
-
-    //file1.open("TestFile.txt")
-
-    inputFile1.close();
+    string str;
+    ifstream a2File("test.txt");
+    while (getline(a2File, str));
+    {
+        cout << str;
+    }
+    
 }

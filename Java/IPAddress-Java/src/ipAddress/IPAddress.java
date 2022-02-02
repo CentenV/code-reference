@@ -185,6 +185,27 @@ public class IPAddress
 		System.out.println("Broadcast Address (Last Address): " + findBroadcastAddress(ipAddress, subnetMask));
 	}
 	
+	
+	public static boolean replay()
+	{
+		Scanner getRun = new Scanner(System.in);
+		System.out.print("\n Enter Y to enter a new IP: ");
+		String runStatus = getRun.nextLine();
+		if (runStatus.equals("Y"))
+		{
+			for (int t = 0; t < 10; t++)
+			{
+				System.out.println("");
+			}
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	
 	public static void main(String[] args) 
 	{
 		boolean run = true;
@@ -199,23 +220,7 @@ public class IPAddress
 
 			calculateIpAddresses(ipAddress_str, subnetMask_str);
 			
-			Scanner getRun = new Scanner(System.in);
-			System.out.print("\n Enter Y to enter a new IP: ");
-			String runStatus = getRun.nextLine();
-			if (runStatus.equals("Y"))
-			{
-				for (int t = 0; t < 10; t++)
-				{
-					System.out.println("");
-				}
-				run = true;
-				continue;
-			}
-			else
-			{
-				run = false;
-				break;
-			}
+			run = replay();
 		}
 	}
 

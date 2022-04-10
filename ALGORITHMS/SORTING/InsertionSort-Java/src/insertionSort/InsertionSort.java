@@ -1,33 +1,31 @@
-// Selection Sort (O(n^2)) also called Linear Sort 
+// Insertion Sort (O(n^2))
 // Language: Java
-package selectionSort;
+package insertionSort;
 
 // Package that contains the generateArray(integer, integer) method. MAKE SURE THE GenerateArray-Java PROJECT IS LOADED IN THE 
 // ALGORITHMS/GenerateToSort/GenerateArray-Java FOLDER
 import randomArrayJava.RandomlyGenerateArray;
 
-public class SelectionSort 
+public class InsertionSort 
 {
-	// SELECTION SORT ALGORITHM
-	public static int[] selectionSort(int[] arr)
+	public static int[] insertionSort(int[] arr)
 	{
-		for (int i = 0; i < arr.length; i++)
+		for (int i = 1; i < arr.length; i++)
 		{
-			int smallestNumberIndex = i;
-			for (int j = i + 1; j < arr.length; j++)
+			int currentValue = arr[i];
+			int possibleIndex = i;
+			
+			while (possibleIndex > 0 && currentValue < arr[possibleIndex-1])
 			{
-				if (arr[j] < arr[smallestNumberIndex])
-				{
-					smallestNumberIndex = j;
-				}
+				arr[possibleIndex] = arr[possibleIndex-1];
+				possibleIndex--;
 			}
-			int temp = arr[i];
-			arr[i] = arr[smallestNumberIndex];
-			arr[smallestNumberIndex] = temp;
+			
+			arr[possibleIndex] = currentValue;
 		}
 		return arr;
 	}
-
+	
 	
 	public static void main(String[] args)
 	{
@@ -40,11 +38,10 @@ public class SelectionSort
 		}
 		System.out.println(" }");
 		
-		
 		// Sorting the array
-		int[] sortedArray = selectionSort(arrayToBeSorted);
+		int[] sortedArray = insertionSort(arrayToBeSorted);
 		System.out.print("Sorted Array: { ");
-		for (int i : sortedArray)
+		for (int i : sortedArray) 
 		{
 			System.out.print(i + " ");
 		}

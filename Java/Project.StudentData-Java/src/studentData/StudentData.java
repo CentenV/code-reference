@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class StudentData 
 {
-	
 	private String name;
 	private int age;
 	private int grade;

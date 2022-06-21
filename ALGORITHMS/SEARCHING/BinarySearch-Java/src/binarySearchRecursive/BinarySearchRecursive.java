@@ -12,6 +12,7 @@ import java.util.Scanner;
 
 public class BinarySearchRecursive
 {
+	// BINARY SEARCH ALGORITHM (RECURSIVE)
 	private static int binarySearch_Recursive(int start, int end, int[] array, int number)
 	{
 		while (start <= end)

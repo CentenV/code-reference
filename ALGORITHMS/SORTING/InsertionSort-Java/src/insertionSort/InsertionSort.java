@@ -8,6 +8,7 @@ import randomArrayJava.RandomlyGenerateArray;
 
 public class InsertionSort 
 {
+	// INSERTION SORT ALGORITHM
 	public static int[] insertionSort(int[] arr)
 	{
 		for (int i = 1; i < arr.length; i++)

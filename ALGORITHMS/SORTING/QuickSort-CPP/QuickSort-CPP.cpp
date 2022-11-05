@@ -59,7 +59,7 @@ int main()
 {
     int unsorted_list[] = { 1, 64, 32, 3, 4, 5, 10, 34, 65, 7, 8, 1 };
 
-    // Initial array
+    // Initial Array
     cout << "Initial array" << endl;
     for (int x : unsorted_list)
     {
@@ -71,7 +71,7 @@ int main()
     quickSort(unsorted_list, 0, (sizeof(unsorted_list) / sizeof(unsorted_list[0])-1));
 
 
-    // Sorted array
+    // Sorted Array
     cout << "Sorted array" << endl;
     for (int x : unsorted_list)
     {

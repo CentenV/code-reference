@@ -1,4 +1,6 @@
 // QUICK SORT (O(nlog(n)))
+// C++
+
 #include <iostream>
 
 using std::cout;

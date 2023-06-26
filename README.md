@@ -3,5 +3,5 @@
 ## Algorithms
 | Topic | C++ | Java |
 | - | - | - |
-| Linear Search |  | ✅ | 
 | Binary Search |  | ✅ | 
+| Linear Search |  | ✅ | 

@@ -4,4 +4,4 @@
 | Topic | C++ | Java |
 | - | - | - |
 | Binary Search |  | ✅ | 
-| Linear Search |  | ✅ | 
+| Linear Search | ✅ | ✅ | 

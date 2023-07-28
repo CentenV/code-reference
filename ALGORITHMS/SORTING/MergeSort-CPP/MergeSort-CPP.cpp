@@ -37,7 +37,7 @@ void merge(int arr[], int start, int middle, int end)
 		i1++;
 		j++;
 	}
-	while (i2 <= middle)
+	while (i2 <= end)
 	{
 		tempArr[j] = arr[i2];
 		i2++;
@@ -86,7 +86,7 @@ int* generateArray(int amountOfNumbers, int maximumValue)
 int main()
 {
 	// Generate array and print it
-	int arrSize = 10;
+	int arrSize = 2;
 	int *arr = generateArray(arrSize, 100);
 	cout << "Initial Array: { ";
 	for (int i = 0; i < arrSize; i++)

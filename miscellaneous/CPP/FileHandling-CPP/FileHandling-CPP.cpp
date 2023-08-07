@@ -1,6 +1,5 @@
-// Opening, Writing, Reading, and Closing Files
+// File Handling: Opening, Writing, Reading, and Closing Files
 // Language: C++
-
 
 #include <iostream>
 #include <fstream>

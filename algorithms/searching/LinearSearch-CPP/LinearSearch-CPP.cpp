@@ -7,21 +7,20 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-// LINEAR SORT ALGORITHM
-int linearSort(int a[], int aSize, int numberToFind)
-{
-    int foundNumberIndex = -1;
 
-    for (int i = 0; i < aSize; i++)
+
+// LINEAR SORT ALGORITHM
+int linearSearch(int a[], const int ARRSIZE, const int VALUETOFIND)
+{
+    for (int i = 0; i < ARRSIZE; i++)
     {
-        if (a[i] == numberToFind)
+        if (a[i] == VALUETOFIND)
         {
-            foundNumberIndex = i;
             return i;
         }
     }
 
-    return foundNumberIndex;
+    return -1;
 }
 
 
@@ -41,8 +40,6 @@ int* generateArray(int amountOfNumbers, int maximumValue)
     return arr;
 }
 
-
-
 int main()
 {
     // Generate array and print it
@@ -51,29 +48,33 @@ int main()
     cout << "Initial Array: { ";
     for (int i = 0; i < arrSize; i++)
     {
-        cout << arr[i] << " ";
+        cout << arr[i];
+        if (i < arrSize - 1)
+        {
+            cout << " ";
+        }
     }
-    cout << " }";
-
-    
+    cout << " }\n";
 
     // Input the number to find in the array
     int numberToFind;
-    cout << "\nEnter number to find in the array: ";
+    cout << "Enter number to find in the array: ";
     cin >> numberToFind;
-    // cout << "\n";
+
+
+    // SEARCH
+    int foundValueIndex = linearSearch(arr, arrSize, numberToFind);
+
 
     // Prints out the result of performing a sequential/linear search
-    int foundNumberIndex = linearSort(arr, arrSize, numberToFind);
-    if (foundNumberIndex != -1)
+    if (foundValueIndex == -1)
     {
-        cout << "Number " << numberToFind << " is in the array at index " << foundNumberIndex << endl;
+        cout << numberToFind << " is not in the array" << endl;
     }
-    else if (foundNumberIndex == -1)
+    else
     {
-        cout << "Number " << numberToFind << " is not in the array" << endl;
+        cout << numberToFind << " is in the array at index " << foundValueIndex << endl;
     }
+    
     delete arr;
 }
-
-

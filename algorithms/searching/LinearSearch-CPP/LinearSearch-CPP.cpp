@@ -1,4 +1,4 @@
-// Linear Search
+// Linear Search    O(N)
 // Language: C++
 
 #include <iostream>
@@ -75,6 +75,6 @@ int main()
     {
         cout << numberToFind << " is in the array at index " << foundValueIndex << endl;
     }
-    
+
     delete arr;
 }

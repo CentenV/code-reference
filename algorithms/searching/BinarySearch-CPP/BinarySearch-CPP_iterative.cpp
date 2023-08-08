@@ -14,29 +14,29 @@ using std::end;
 
 
 // BINARY SEARCH ALGORITHM
-int binarySearch(int arr[], const int START, const int END, const int TARGET)
+int binarySearch(int arr[], int start, int end, const int TARGET)
 {
-    // Check if the target was not found
-    if (START > END)
+    while (start <= end)
     {
-        return -1;
+        int middle = (start + end) / 2;
+
+        // Determine equal and split to upper or lower
+        if (arr[middle] == TARGET)
+        {
+            return middle;
+        }
+        else if (TARGET < arr[middle])
+        {
+            end = middle - 1;
+        }
+        else if (TARGET > arr[middle])
+        {
+            start = middle + 1;
+        }
     }
 
-    int middle = (START + END) / 2;
-
-    // Determine equal and split to upper or lower
-    if (arr[middle] == TARGET)
-    {
-        return middle;
-    }
-    else if (TARGET < arr[middle])
-    {
-        return binarySearch(arr, START, middle - 1, TARGET);
-    }
-    else if (TARGET > arr[middle])
-    {
-        return binarySearch(arr, middle + 1, END, TARGET);
-    }
+    // Target not found
+    return -1;
 }
 
 

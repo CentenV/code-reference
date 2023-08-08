@@ -9,7 +9,7 @@ using std::endl;
 
 
 
-// LINEAR SORT ALGORITHM
+// LINEAR SEARCH ALGORITHM
 int linearSearch(int a[], const int ARRSIZE, const int VALUETOFIND)
 {
     for (int i = 0; i < ARRSIZE; i++)

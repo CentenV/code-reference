@@ -1,4 +1,4 @@
-// Linear Search    O(N)
+// Linear Search    O(n)
 // Language: C++
 
 #include <iostream>
@@ -10,11 +10,11 @@ using std::endl;
 
 
 // LINEAR SEARCH ALGORITHM
-int linearSearch(int a[], const int ARRSIZE, const int VALUETOFIND)
+int linearSearch(int arr[], const int ARRSIZE, const int VALUETOFIND)
 {
     for (int i = 0; i < ARRSIZE; i++)
     {
-        if (a[i] == VALUETOFIND)
+        if (arr[i] == VALUETOFIND)
         {
             return i;
         }

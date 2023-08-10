@@ -1,10 +1,11 @@
-// QUICK SORT (O(nlog(n)))
+// QUICK SORT (O(n*log(n)))
 // Language: C++
 
 #include <iostream>
 
 using std::cout;
 using std::endl;
+
 
 
 // MERGE SORT ALGORITHM

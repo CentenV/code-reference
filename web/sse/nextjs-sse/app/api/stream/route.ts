@@ -31,10 +31,10 @@ export function GET(request: NextRequest) {
     }
 
     const EVENT_NAME = "my-sse";
-    let broadcastData = { data: { message: "", status: "run" } };
+    let broadcastData = { data: { message: "" }, status: "run" };
     async function longRunningFunction() {
         // Message update 1
-        broadcastData.data.message = broadcastData.data.message + "\n" + "Loading Code";
+        broadcastData.data.message = broadcastData.data.message + "\n" + "Loading Code\nTesting\nNo";
         writer.write(encoder.encode(`event: ${EVENT_NAME}\n`));
         writer.write(encoder.encode(toDataString(broadcastData)));
         await delay(1500);
@@ -55,7 +55,7 @@ export function GET(request: NextRequest) {
         await delay(1500);
         // Message update 5
         broadcastData.data.message = broadcastData.data.message + "\n" + "Done";
-        broadcastData.data.status = "terminated";
+        broadcastData.status = "terminated";
         writer.write(encoder.encode(`event: ${EVENT_NAME}\n`));
         writer.write(encoder.encode(toDataString(broadcastData)));
 
@@ -66,7 +66,6 @@ export function GET(request: NextRequest) {
 
     return new NextResponse(responseStream.readable, { 
         headers: {
-            "Access-Control-Allow-Origin": "*",
             "Content-Type": "text/event-stream; charset=utf-8",
             Connection: "keep-alive",
             "Cache-Control": "no-cache, no-transform",

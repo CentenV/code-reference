@@ -1,5 +1,5 @@
-// QUICK SORT (O(nlog(n)))
-// C++
+// QUICK SORT   O(n*log(n))
+// Language: C++
 
 #include <iostream>
 

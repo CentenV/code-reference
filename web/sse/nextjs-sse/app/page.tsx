@@ -10,8 +10,9 @@ export default function Home() {
     source.addEventListener("my-sse", event => {
       console.log(event.data);
       let payload = JSON.parse(event.data);
-      updateStatus(payload.data.message);
-      if (payload.data.status == "terminated") { source.close(); }
+      console.log(payload.data.message);
+      // updateStatus(payload.data.message);
+      if (payload.status == "terminated") { source.close(); }
     });
   }
 

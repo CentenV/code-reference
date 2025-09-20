@@ -14,7 +14,9 @@ int* global_socket_fd;
 
 void close_server(int signum)
 {
+  cout << "\nReceived " << signum << ". Exiting..." << endl;
   close(*global_socket_fd);
+  exit(1);
 }
 
 WebServer::WebServer()
